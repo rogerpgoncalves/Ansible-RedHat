@@ -1,0 +1,12 @@
+---
+  name: create administrative users
+  hosts: all
+  tasks:
+     - name: create user support roger
+       user:
+         name: roger
+         uid: 2001
+         shell: /bin/bash
+         groups: support, wheel
+         append: yes
+...
